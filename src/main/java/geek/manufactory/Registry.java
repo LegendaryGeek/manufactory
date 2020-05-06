@@ -6,7 +6,9 @@ import org.apache.logging.log4j.Logger;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.Properties;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,6 +25,7 @@ public final class Registry {
 	
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, T block) {
 		RegistryObject<T> register = BlocksRegistry.register(name, () -> block);
+		registerItem(name, new BlockItem(block, new Item.Properties()));
 		LOGGER.info("registered block: " + block.getRegistryName());
 		return register;
 	}
