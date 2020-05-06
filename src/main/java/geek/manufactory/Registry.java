@@ -17,7 +17,7 @@ public final class Registry {
 	protected  static DeferredRegister<Block> BlocksRegistry = new DeferredRegister<>(ForgeRegistries.BLOCKS, ManuFactory.getModID());
 	protected  static DeferredRegister<Item> ItemsRegistry = new DeferredRegister<>(ForgeRegistries.ITEMS, ManuFactory.getModID());
 
-	public static final RegistryObject<Block> tinBlock = registerBlock("tinBlock", new Block(Block.Properties.create(Material.IRON, MaterialColor.IRON)));
+	public static final RegistryObject<Block> tinBlock = registerBlock("tinblock", new Block(Block.Properties.create(Material.IRON, MaterialColor.IRON)));
 	
 	public static final RegistryObject<Item> tinIngot = registerItem("tiningot", new Item(new Item.Properties()));
 	
