@@ -1,13 +1,21 @@
 package geek.manufactory.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.inventory.container.IContainerProvider;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemTier;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityType;
 
-public abstract class MachineBase extends Block {
+public abstract class MachineBase extends TileEntity implements IContainerProvider {
 	
-	protected enum MaterialTier { // assuming it's internal to MachineBase
+	public MachineBase(TileEntityType<?> tileEntityTypeIn, MaterialTier tier) {
+		super(tileEntityTypeIn);
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public static enum MaterialTier { // assuming it's internal to MachineBase
 		WOOD (1,1, ItemTier.WOOD),
 		STONE (2,2, ItemTier.STONE),
 		IRON (3,3, ItemTier.IRON),
@@ -32,10 +40,7 @@ public abstract class MachineBase extends Block {
 
 	private MaterialTier tier;
 
-	public MachineBase(Properties properties) {
-		super(properties);
-		// TODO Auto-generated constructor stub
-	}
+
 
 
 }
