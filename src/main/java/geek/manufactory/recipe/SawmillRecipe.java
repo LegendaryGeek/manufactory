@@ -8,6 +8,10 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class SawmillRecipe extends SpecialRecipe {
+	
+	/*
+	 * literally just a created class. needs everything to make it specialz
+	 */
 
 	public SawmillRecipe(ResourceLocation p_i48169_1_) {
 		super(p_i48169_1_);

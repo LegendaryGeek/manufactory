@@ -34,7 +34,8 @@ public class SquirtGun extends BowItem {
 
 		this.containedBlock = fluidIn;
 	}
-	
+
+    // begin code copied from {@link net.minecraft.item.BucketItem}
 	   /**
 	    * Called to trigger the item's "innate" right click behavior. To handle when this item is used on a Block, see
 	    * {@link #onItemUse}.
@@ -74,8 +75,11 @@ public class SquirtGun extends BowItem {
 	                     return ActionResult.resultSuccess(itemstack1);
 	                  }
 	               }
+	               
 
 	               return ActionResult.resultFail(itemstack);
+	                  // end code copied from {@link net.minecraft.item.BucketItem}
+	                
 	            } else {
 	            	// Do stuff if possible
 	               RayTraceResult rtrus = squirtgun.rayTrace(worldIn, playerIn, FluidMode.ANY);

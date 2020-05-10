@@ -15,6 +15,7 @@ public class AxeSlot extends SlotItemHandler {
 		// TODO Auto-generated constructor stub
 	}
 
+	// this is where item checking needs to happen
 	@Override
 	public boolean isItemValid(ItemStack stack) {
 		return false;

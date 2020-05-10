@@ -11,6 +11,12 @@ import net.minecraftforge.common.ForgeHooks;
 
 public class SawmillTileentity extends MachineBase {
 	
+	/*
+	 * the tile entity handles any and all calculation needed for
+	 * the entire block.
+	 */
+	
+	// the type for this tile entity
 	public static TileEntityType<SawmillTileentity> type;
 
 	public SawmillTileentity(MaterialTier tier) {
